@@ -3,6 +3,7 @@
 <img width="1098" alt="Screenshot 2024-02-19 at 19 20 32" src="https://github.com/samirgcofficial/RazorPaymentMaui/assets/55045516/a0336a74-182d-46f2-81d4-de14855d33ef">
 
 
+![RazorPay](https://github.com/samirgcofficial/RazorPaymentMaui/assets/55045516/fc487275-90f4-4117-859d-6ee8ca586f8c)
 
 Welcome to the Razor Payment Plugin for .NET MAUI repository! Our Plugin provides seamless integration with Razorpay's powerful payment gateway, enabling developers to quickly and securely accept payments in their .NET MAUI applications.
 
