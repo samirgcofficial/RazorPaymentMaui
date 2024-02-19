@@ -15,7 +15,7 @@ To start using the Razor Payment SDK in your .NET MAUI project, follow these sim
 
  **Installation**: Install the Razor Payment SDK NuGet package in your .NET MAUI project.
    ```sh
-   nuget install RazorPaymentMin.Sdk (https://www.nuget.org/packages/Plugin.Maui.RazorPaymentMin)
+  dotnet add package Plugin.Maui.RazorPaymentMin --version 1.0.7
 ```
 
 # Initialize Razor Payment SDK
@@ -24,7 +24,8 @@ To start using the Razor Payment SDK in your .NET MAUI project, follow these sim
  RazorPayService.Init("YOUR_API_KEY"); // https://dashboard.razorpay.com/app/website-app-settings/api-keys
 
 ```
-# Maui Android Implementation
+
+# Maui Android Implementation MainActivity.cs
 ```csharp
    protected override void OnCreate(Bundle? savedInstanceState)
         {
@@ -33,16 +34,7 @@ To start using the Razor Payment SDK in your .NET MAUI project, follow these sim
         }
 ```
 
-# Maui iOS Implementation MainActivity.cs
-```csharp
-   protected override void OnCreate(Bundle? savedInstanceState)
-        {
-            base.OnCreate(savedInstanceState);
-            RazorPayService.Init(this, "rzp_test_m9jmynsTPIHEDl"); //Add your Razor Pay Api Key https://dashboard.razorpay.com/app/website-app-settings/api-keys 
-        }
-```
-
-# Create payment details AppDelegate.cs
+# Maui iOS Create payment details AppDelegate.cs
 
 ```csharp
  public override bool FinishedLaunching(UIApplication application, NSDictionary launchOptions)
@@ -78,6 +70,7 @@ string OrderID = "order_NcnkRJMfUCcRw5";
 
 ```
 
-# Full Version **
+
+# ** Full Version **
 For the full version of the SDK without the evaluation copy, consider supporting the project by buying us a coffee.
 https://www.buymeacoffee.com/samirgc/e/222788
