@@ -34,6 +34,10 @@ namespace RazorMauiApp
         private void OnCounterClicked(object sender, EventArgs e)
         {
             string OrderID = "order_NcnkRJMfUCcRw5";
+            //In order for Razor Payment to function properly,
+            //a new order ID must be generated for each successful payment made.
+            //You can find more information about this process at the following link:
+            //[RazorPay Public Workspace](https://www.postman.com/razorpaydev/workspace/razorpay-public-workspace/folder/12492020-91450029-1c52-4375-8033-39ca4c2d0a8c).
 
             PaymentDetails paymentDetails = new PaymentDetails
             {

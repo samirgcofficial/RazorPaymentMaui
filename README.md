@@ -8,35 +8,76 @@ Welcome to the Razor Payment SDK for .NET MAUI repository! Our SDK provides seam
 
 - **Easy Integration**: Integrate Razorpay's payment gateway into your .NET MAUI apps with just a few lines of code.
 - **Secure Transactions**: Ensure secure and encrypted payment transactions for your users.
-- **Customizable UI**: Customize the payment UI to match the look and feel of your app.
-- **Supports Multiple Payment Methods**: Accept payments via credit/debit cards, net banking, UPI, wallets, and more.
-- **Comprehensive Documentation**: Detailed documentation and code examples to help you get started quickly.
 
 ## Getting Started
 
 To start using the Razor Payment SDK in your .NET MAUI project, follow these simple steps:
 
-1. **Installation**: Install the Razor Payment SDK NuGet package in your .NET MAUI project.
+ **Installation**: Install the Razor Payment SDK NuGet package in your .NET MAUI project.
    ```sh
    nuget install RazorPaymentMin.Sdk (https://www.nuget.org/packages/Plugin.Maui.RazorPaymentMin)
+```
 
-Usage: Initialize the Razor Payment SDK with your Razorpay API key and integrate the payment UI into your app.
+# Initialize Razor Payment SDK
+```csharp
 
-using Plugin.Maui.RazorPaymentMin;
+ RazorPayService.Init("YOUR_API_KEY"); // https://dashboard.razorpay.com/app/website-app-settings/api-keys
 
-// Initialize Razor Payment SDK
-RazorPaymentMin.Initialize("YOUR_API_KEY");
+```
+# Maui Android Implementation
+```csharp
+   protected override void OnCreate(Bundle? savedInstanceState)
+        {
+            base.OnCreate(savedInstanceState);
+            RazorPayService.Init(this, "rzp_test_m9jmynsTPIHEDl"); //Add your Razor Pay Api Key https://dashboard.razorpay.com/app/website-app-settings/api-keys 
+        }
+```
 
-// Create payment details
-var paymentDetails = new PaymentDetails
-{
-    // Set payment details such as amount, currency, order ID, etc.
-};
+# Maui iOS Implementation MainActivity.cs
+```csharp
+   protected override void OnCreate(Bundle? savedInstanceState)
+        {
+            base.OnCreate(savedInstanceState);
+            RazorPayService.Init(this, "rzp_test_m9jmynsTPIHEDl"); //Add your Razor Pay Api Key https://dashboard.razorpay.com/app/website-app-settings/api-keys 
+        }
+```
 
-// Open payment UI
-RazorPaymentMin.OpenPaymentUI(paymentDetails);
+# Create payment details AppDelegate.cs
 
+```csharp
+ public override bool FinishedLaunching(UIApplication application, NSDictionary launchOptions)
+        {
+            var result = base.FinishedLaunching(application, launchOptions);
+            RazorPayService.Init("rzp_test_m9jmynsTPIHEDl");//Add your Razor Pay Api Key https://dashboard.razorpay.com/app/website-app-settings/api-keys 
+            return result;
+        }
+```
 
-**Full Version**
+# Dotnet MAUI Implementation 
+```csharp
+string OrderID = "order_NcnkRJMfUCcRw5";
+            //In order for Razor Payment to function properly,
+            //a new order ID must be generated for each successful payment made.
+            //You can find more information about this process at the following link:
+            //[RazorPay Public Workspace](https://www.postman.com/razorpaydev/workspace/razorpay-public-workspace/folder/12492020-91450029-1c52-4375-8033-39ca4c2d0a8c).
+
+            PaymentDetails paymentDetails = new PaymentDetails
+            {
+                Amount = "20000",
+                Currency = "INR",
+                Description = "This is just a test",
+                OrderId = OrderID,
+                Name = "Samir GC",
+                Prefill = new PaymentDetails.PrefillDetails
+                {
+                    Contact = "+97798482345567",
+                    Email = "abc@gmail.com"
+                }
+            };
+            razorPayService.Pay(paymentDetails);
+
+```
+
+# Full Version **
 For the full version of the SDK without the evaluation copy, consider supporting the project by buying us a coffee.
 https://www.buymeacoffee.com/samirgc/e/222788

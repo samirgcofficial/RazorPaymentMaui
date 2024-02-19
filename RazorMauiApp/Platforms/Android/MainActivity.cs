@@ -29,7 +29,7 @@ namespace RazorMauiApp
         protected override void OnCreate(Bundle? savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
-            RazorPayService.Init(this, "rzp_test_m9jmynsTPIHEDl");
+            RazorPayService.Init(this, "rzp_test_m9jmynsTPIHEDl"); //Add your Razor Pay Api Key https://dashboard.razorpay.com/app/website-app-settings/api-keys 
         }
     }
 }

@@ -13,7 +13,7 @@ namespace RazorMauiApp
         public override bool FinishedLaunching(UIApplication application, NSDictionary launchOptions)
         {
             var result = base.FinishedLaunching(application, launchOptions);
-            RazorPayService.Init("rzp_test_m9jmynsTPIHEDl");
+            RazorPayService.Init("rzp_test_m9jmynsTPIHEDl");//Add your Razor Pay Api Key https://dashboard.razorpay.com/app/website-app-settings/api-keys 
             return result;
         }
     }
