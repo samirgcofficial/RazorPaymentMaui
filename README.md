@@ -1,6 +1,8 @@
 # Razor Payment SDK for .NET MAUI
 
-![Razor Payment SDK Logo](https://example.com/razor-payment-sdk-logo.png)
+<img width="1098" alt="Screenshot 2024-02-19 at 19 20 32" src="https://github.com/samirgcofficial/RazorPaymentMaui/assets/55045516/a0336a74-182d-46f2-81d4-de14855d33ef">
+
+
 
 Welcome to the Razor Payment SDK for .NET MAUI repository! Our SDK provides seamless integration with Razorpay's powerful payment gateway, enabling developers to quickly and securely accept payments in their .NET MAUI applications.
 
@@ -72,5 +74,5 @@ string OrderID = "order_NcnkRJMfUCcRw5";
 
 
 # ** Full Version **
-For the full version of the SDK without the evaluation copy, consider supporting the project by buying us a coffee.
+For the full version of the SDK without the evaluation copy, consider supporting the project by buying us a coffee and supporting our hard work 🥰.
 https://www.buymeacoffee.com/samirgc/e/222788
