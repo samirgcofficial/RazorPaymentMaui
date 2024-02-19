@@ -1,10 +1,10 @@
-# Razor Payment SDK for .NET MAUI
+# Razor Payment Native Plugin for .NET MAUI
 
 <img width="1098" alt="Screenshot 2024-02-19 at 19 20 32" src="https://github.com/samirgcofficial/RazorPaymentMaui/assets/55045516/a0336a74-182d-46f2-81d4-de14855d33ef">
 
 
 
-Welcome to the Razor Payment SDK for .NET MAUI repository! Our SDK provides seamless integration with Razorpay's powerful payment gateway, enabling developers to quickly and securely accept payments in their .NET MAUI applications.
+Welcome to the Razor Payment Plugin for .NET MAUI repository! Our Plugin provides seamless integration with Razorpay's powerful payment gateway, enabling developers to quickly and securely accept payments in their .NET MAUI applications.
 
 ## Features
 
@@ -13,14 +13,14 @@ Welcome to the Razor Payment SDK for .NET MAUI repository! Our SDK provides seam
 
 ## Getting Started
 
-To start using the Razor Payment SDK in your .NET MAUI project, follow these simple steps:
+To start using the Razor Payment Plugin in your .NET MAUI project, follow these simple steps:
 
- **Installation**: Install the Razor Payment SDK NuGet package in your .NET MAUI project.
+ **Installation**: Install the Razor Payment Plugin NuGet package in your .NET MAUI project.
    ```sh
   dotnet add package Plugin.Maui.RazorPaymentMin --version 1.0.7
 ```
 
-# Initialize Razor Payment SDK
+# Initialize Razor Payment Plugin
 ```csharp
 
  RazorPayService.Init("YOUR_API_KEY"); // https://dashboard.razorpay.com/app/website-app-settings/api-keys
@@ -74,5 +74,5 @@ string OrderID = "order_NcnkRJMfUCcRw5";
 
 
 # ** Full Version **
-For the full version of the SDK without the evaluation copy, consider supporting the project by buying us a coffee and supporting our hard work 🥰.
+For the full version of the Plugin without the evaluation copy, consider supporting the project by buying us a coffee and supporting our hard work 🥰.
 https://www.buymeacoffee.com/samirgc/e/222788
