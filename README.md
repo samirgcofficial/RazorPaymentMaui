@@ -18,7 +18,7 @@ To start using the Razor Payment Plugin in your .NET MAUI project, follow these 
 
  **Installation**: Install the Razor Payment Plugin NuGet package in your .NET MAUI project.
    ```sh
-  dotnet add package Plugin.Maui.RazorPaymentMin --version 1.0.9
+  dotnet add package Plugin.Maui.RazorPaymentMin --version 1.1.0
 ```
 
 # Initialize Razor Payment Plugin
