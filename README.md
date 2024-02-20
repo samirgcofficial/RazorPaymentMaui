@@ -66,9 +66,8 @@ string OrderID = "order_NcnkRJMfUCcRw5";
 
 ```
 
-# Alert!  Please use your credentials before tesing the sample app. For Creating order ID please follow this video : https://drive.google.com/file/d/1q16mLdK4ZdmLHQ-SVPm-cuDfPHkwuPlk/view?usp=sharing
-
-
+# ** Alert! **
+Please use your credentials before tesing the sample app. For Creating order ID please follow this video : https://drive.google.com/file/d/1q16mLdK4ZdmLHQ-SVPm-cuDfPHkwuPlk/view?usp=sharing
 
 # ** Full Version **
 For the full version of the Plugin without the evaluation copy, consider supporting the project by buying us a coffee and supporting our hard work 🥰.
