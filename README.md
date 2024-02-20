@@ -21,19 +21,12 @@ To start using the Razor Payment Plugin in your .NET MAUI project, follow these 
   dotnet add package Plugin.Maui.RazorPaymentMin --version 1.1.0
 ```
 
-# Initialize Razor Payment Plugin
-```csharp
-
- RazorPayService.Init("YOUR_API_KEY"); // https://dashboard.razorpay.com/app/website-app-settings/api-keys
-
-```
-
 # Maui Android Implementation MainActivity.cs
 ```csharp
    protected override void OnCreate(Bundle? savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
-            RazorPayService.Init(this, "rzp_test_m9jmynsTPIHEDl"); //Add your Razor Pay Api Key https://dashboard.razorpay.com/app/website-app-settings/api-keys 
+            RazorPayService.Init(this, "rzp_test_xxxxxxxxx"); //Add your Razor Pay Api Key https://dashboard.razorpay.com/app/website-app-settings/api-keys 
         }
 ```
 
@@ -43,7 +36,7 @@ To start using the Razor Payment Plugin in your .NET MAUI project, follow these 
  public override bool FinishedLaunching(UIApplication application, NSDictionary launchOptions)
         {
             var result = base.FinishedLaunching(application, launchOptions);
-            RazorPayService.Init("rzp_test_m9jmynsTPIHEDl");//Add your Razor Pay Api Key https://dashboard.razorpay.com/app/website-app-settings/api-keys 
+            RazorPayService.Init("rzp_test_xxxxxxxx");//Add your Razor Pay Api Key https://dashboard.razorpay.com/app/website-app-settings/api-keys 
             return result;
         }
 ```
@@ -72,6 +65,9 @@ string OrderID = "order_NcnkRJMfUCcRw5";
             razorPayService.Pay(paymentDetails);
 
 ```
+
+# Alert!  Please use your credentials before tesing the sample app. For Creating order ID please follow this video : https://drive.google.com/file/d/1q16mLdK4ZdmLHQ-SVPm-cuDfPHkwuPlk/view?usp=sharing
+
 
 
 # ** Full Version **
