@@ -43,7 +43,7 @@ To start using the Razor Payment Plugin in your .NET MAUI project, follow these 
 
 # Dotnet MAUI Implementation 
 ```csharp
-string OrderID = "order_NcnkRJMfUCcRw5";
+string OrderID = "order_NcnXXXXXX";
             //In order for Razor Payment to function properly,
             //a new order ID must be generated for each successful payment made.
             //You can find more information about this process at the following link:
