@@ -71,4 +71,4 @@ Please use your credentials before tesing the sample app. For Creating order ID 
 
 # ** Full Version **
 For the full version of the Plugin without the evaluation copy, consider supporting the project by buying us a coffee and supporting our hard work 🥰.
-https://www.buymeacoffee.com/samirgc/e/222788
+
