@@ -73,5 +73,5 @@ Please use your credentials before tesing the sample app. For Creating order ID 
 https://razorpay.com/docs/payments/smart-collect/create/
 
 # ** Full Version **
-For the full version of the Plugin without the evaluation copy, consider supporting the project by buying us a coffee and supporting our hard work 🥰.
+For the full version of the Plugin without the evaluation copy, consider supporting the project by buying us a coffee and supporting our hard work 🥰. (Please test the evaluation copy before purchase)
 https://www.buymeacoffee.com/samirgc/e/222788
