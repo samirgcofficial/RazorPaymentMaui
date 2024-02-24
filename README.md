@@ -67,11 +67,12 @@ string OrderID = "order_NcnXXXXXX";
 ```
 
 # ** Alert! **
-Please use your credentials before tesing the sample app. For Creating order ID please follow this video : https://drive.google.com/file/d/1q16mLdK4ZdmLHQ-SVPm-cuDfPHkwuPlk/view?usp=sharing
+Please authenticate with your credentials before testing the sample app. To generate an order ID, please refer to this instructional video: [link](https://drive.google.com/file/d/1q16mLdK4ZdmLHQ-SVPm-cuDfPHkwuPlk/view?usp=sharing).
 
-# ** ENABLE UPI Payment in your dashboard **
-https://razorpay.com/docs/payments/smart-collect/create/
+**Activate UPI Payment on your dashboard**
+For instructions, visit: [Razorpay Documentation](https://razorpay.com/docs/payments/smart-collect/create/)
 
-# ** Full Version **
-For the full version of the Plugin without the evaluation copy, consider supporting the project by buying us a coffee and supporting our hard work 🥰. (Please test the evaluation copy before purchase)
-https://www.buymeacoffee.com/samirgc/e/222788
+
+**Unlock the Full Version**
+Gain access to the entire plugin, free from the evaluation limitations, by supporting our project with a small contribution. Your support acknowledges our hard work and dedication 🥰. We suggest trying the evaluation copy before purchasing. Plus, I've made it affordable for all customers.
+[Support us](https://www.buymeacoffee.com/samirgc/e/222788)
