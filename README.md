@@ -65,6 +65,8 @@ string OrderID = "order_NcnXXXXXX";
             razorPayService.Pay(paymentDetails);
 
 ```
+** How to add plugin on .net 8 project ??? **
+https://drive.google.com/file/d/1aKybP5vjAinlnGG3IlRyQm4bQcOmT2sf/view?usp=sharing
 
 # ** Alert! **
 Please authenticate with your credentials before testing the sample app. To generate an order ID, please refer to this instructional video: [link](https://drive.google.com/file/d/1q16mLdK4ZdmLHQ-SVPm-cuDfPHkwuPlk/view?usp=sharing).
