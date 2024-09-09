@@ -4,57 +4,77 @@ namespace RazorMauiApp
 {
     public partial class MainPage : ContentPage
     {
-        private readonly IRazorPayServices razorPayService;
         public MainPage()
         {
             InitializeComponent();
-            razorPayService = (IRazorPayServices)(new RazorPayService());
-            razorPayService.PaymentSuccess += OnPaymentSuccess;
-            razorPayService.PaymentError += OnPaymentError;
+            RazorPayment.PaymentSuccess += OnPaymentSuccess;
+            RazorPayment.PaymentError += OnPaymentError;
         }
 
         private void OnPaymentError(object sender, (string, IDictionary<string, string>) e)
         {
-            App.Current.MainPage.DisplayAlert("Alert", e.Item1.ToString(), "Ok");
+            string errorMessage = e.Item1;
+            IDictionary<string, string> errorDetails = e.Item2;
+
+            MainThread.InvokeOnMainThreadAsync(async () =>
+            {
+                await App.Current.MainPage.DisplayAlert("Alert", errorMessage, "Ok");
+            });
         }
 
         private void OnPaymentSuccess(object sender, IDictionary<string, object> e)
         {
-            if (e.ContainsKey("razorpay_payment_id"))
+            if (e.ContainsKey("PaymentId"))
             {
-                string paymentId = e["razorpay_payment_id"].ToString();
-                App.Current.MainPage.DisplayAlert("Payment Success", $"Payment ID: {paymentId}", "Ok");
+                string paymentId = e["PaymentId"].ToString();
+
+                MainThread.InvokeOnMainThreadAsync(async () =>
+                {
+                    App.Current.MainPage.DisplayAlert("Payment Success", $"Payment ID: {paymentId}", "Ok");
+                });
             }
             else
             {
-                App.Current.MainPage.DisplayAlert("Error", "Payment ID not found", "Ok");
+                MainThread.InvokeOnMainThreadAsync(async () =>
+                {
+                    App.Current.MainPage.DisplayAlert("Error", "Payment ID not found", "Ok");
+                });
             }
         }
 
-        private void OnCounterClicked(object sender, EventArgs e)
+        private void OnPayButtonClicked(object sender, EventArgs e)
         {
-            string OrderID = "order_Ndds0QgValZG4A";
-            //In order for Razor Payment to function properly,
-            //a new order ID must be generated for each successful payment made.
-            //You can find more information about this process at the following link:
-            //[RazorPay Public Workspace](https://www.postman.com/razorpaydev/workspace/razorpay-public-workspace/folder/12492020-91450029-1c52-4375-8033-39ca4c2d0a8c).
-
-            PaymentDetails paymentDetails = new PaymentDetails
+            var paymentDetails = new PaymentDetails
             {
-                Amount = "20000",
+                Name = "Test Product",
+                Description = "Product Description",
+                Image = "https://example.com/image.png",
+                OrderId = "order_Ov33HouGAqUzQr",
                 Currency = "INR",
-                Description = "This is just a test",
-                OrderId = OrderID,
-                Name = "Samir GC",
+                Amount = "10000", // amount in subunits
                 Prefill = new PaymentDetails.PrefillDetails
                 {
-                    Contact = "+97798482345567",
-                    Email = "abc@gmail.com"
+                    Email = "user@example.com",
+                    Contact = "1234567890"
                 }
             };
-            razorPayService.Pay(paymentDetails);
+            RazorPayment.Pay(paymentDetails);
+        }
 
+        private void OnSubscriptionPayButtonClicked(object sender, EventArgs e)
+        {
+            var subscriptionDetails = new SubscriptionDetails
+            {
+                Name = "Subscription Product",
+                Description = "Subscription Description",
+                Image = "https://example.com/image.png",
+                SubscriptionId = "sub_Ov4MlMC7bWYU29", // Generate a subscription id from backend
+                Currency = "INR",
+                Amount = "10000", // amount in subunits
+
+            };
+
+            RazorPayment.SubscriptionPay(subscriptionDetails);
         }
     }
-
 }

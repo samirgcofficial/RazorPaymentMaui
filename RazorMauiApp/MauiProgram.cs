@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.Logging;
+﻿using MauiSharedLib;
+using Microsoft.Extensions.Logging;
 
 namespace RazorMauiApp
 {
@@ -9,6 +10,7 @@ namespace RazorMauiApp
             var builder = MauiApp.CreateBuilder();
             builder
                 .UseMauiApp<App>()
+                .UseMauiRazorPay("rzp_test_xxxxxxx") // //Add your Razor Pay Api Key https://dashboard.razorpay.com/app/website-app-settings/api-keys 
                 .ConfigureFonts(fonts =>
                 {
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
