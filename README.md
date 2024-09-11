@@ -126,7 +126,7 @@ To start using the Razor Payment Plugin in your .NET MAUI project, follow these 
             RazorPayment.SubscriptionPay(subscriptionDetails);
         }
     }
-
+```
 # .csproj Implementation (RazorMauiApp.csproj - Edit the .csproj file and below code to resolve the long path error when running the simulator on Windows.)
 ```csharp
 <PropertyGroup Condition="$(TargetFramework.Contains('-ios')) and '$(Configuration)' == 'Debug'">
