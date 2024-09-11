@@ -59,10 +59,13 @@
 		<PackageReference Include="Microsoft.Maui.Controls" Version="$(MauiVersion)" />
 		<PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="$(MauiVersion)" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="8.0.0" />
-		<PackageReference Include="Plugin.Maui.RazorPaymentMin" Version="0.0.4" />
+		<PackageReference Include="Plugin.Maui.RazorPaymentMin" Version="0.0.6" />
 	</ItemGroup>
 	<PropertyGroup Condition="$(TargetFramework.Contains('-ios')) and '$(Configuration)' == 'Debug'">
 		<ForceSimulatorX64ArchitectureInIDE>true</ForceSimulatorX64ArchitectureInIDE>
 	</PropertyGroup>
-
+	<PropertyGroup>
+		<BaseOutputPath>..\..\..\..\..\temp\</BaseOutputPath>
+	</PropertyGroup>
+	
 </Project>
