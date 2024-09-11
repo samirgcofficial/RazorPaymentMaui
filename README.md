@@ -107,7 +107,7 @@ To start using the Razor Payment Plugin in your .NET MAUI project, follow these 
                     Email = "abc@gmail.com"
                 }
             };
-            razorPayService.Pay(paymentDetails);
+            RazorPayment.Pay(paymentDetails);
         }
 
         private void OnSubscriptionPayButtonClicked(object sender, EventArgs e)
