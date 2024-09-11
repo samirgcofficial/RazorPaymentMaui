@@ -15,9 +15,9 @@ Welcome to the Razor Payment Plugin for .NET MAUI repository! Our Plugin provide
 
 To start using the Razor Payment Plugin in your .NET MAUI project, follow these simple steps:
 
- **Installation**: Install the Razor Payment Plugin NuGet package in your .NET MAUI project. (https://www.nuget.org/packages/Plugin.Maui.RazorPaymentMin/0.0.1)
+ **Installation**: Install the Razor Payment Plugin NuGet package in your .NET MAUI project. (https://www.nuget.org/packages/Plugin.Maui.RazorPaymentMin/0.0.4)
    ```sh
-   dotnet add package Plugin.Maui.RazorPaymentMin --version 0.0.1 
+   dotnet add package Plugin.Maui.RazorPaymentMin --version 0.0.4 
 ```
 
 # Initialize Razor Payment Plugin inside MauiProgram.cs
@@ -126,11 +126,19 @@ To start using the Razor Payment Plugin in your .NET MAUI project, follow these 
             RazorPayment.SubscriptionPay(subscriptionDetails);
         }
     }
-
 ```
+# .csproj Implementation (RazorMauiApp.csproj - Edit the .csproj file and add below code on Windows System.)
+```csharp
+<PropertyGroup Condition="$(TargetFramework.Contains('-ios')) and '$(Configuration)' == 'Debug'">
+	<ForceSimulatorX64ArchitectureInIDE>true</ForceSimulatorX64ArchitectureInIDE>
+</PropertyGroup>
+<PropertyGroup>
+	<BaseOutputPath>..\..\..\..\..\temp\</BaseOutputPath>
+</PropertyGroup>
+```
+
 # ** How to add plugin on .net 8 project ???  **
 https://drive.google.com/file/d/1aKybP5vjAinlnGG3IlRyQm4bQcOmT2sf/view?usp=sharing
-
 
 # ** Alert! **
 Please authenticate with your credentials before testing the sample app. To generate an order ID, please refer to this instructional video: [link](https://drive.google.com/file/d/1q16mLdK4ZdmLHQ-SVPm-cuDfPHkwuPlk/view?usp=sharing).
