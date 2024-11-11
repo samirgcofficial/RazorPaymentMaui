@@ -132,7 +132,7 @@ To start using the Razor Payment Plugin in your .NET MAUI project, follow these 
 <PropertyGroup Condition="$(TargetFramework.Contains('-ios')) and '$(Configuration)' == 'Debug'">
 	<ForceSimulatorX64ArchitectureInIDE>true</ForceSimulatorX64ArchitectureInIDE>
 </PropertyGroup>
-<PropertyGroup>
+<PropertyGroup Condition="$(TargetFramework.Contains('-ios'))">
 	<BaseOutputPath>..\..\..\..\..\temp\</BaseOutputPath>
 </PropertyGroup>
 ```
