@@ -128,12 +128,13 @@ To start using the Razor Payment Plugin in your .NET MAUI project, follow these 
     }
 ```
 # .csproj Implementation (RazorMauiApp.csproj - Edit the .csproj file and add below code on Windows System.)
+Known Issue : https://github.com/xamarin/xamarin-macios/wiki/Known-issues-in-.NET8#permission-denied-during-dotnet-build-for-net80-ios-and-net80-maccatalyst
 ```csharp
 <PropertyGroup Condition="$(TargetFramework.Contains('-ios')) and '$(Configuration)' == 'Debug'">
 	<ForceSimulatorX64ArchitectureInIDE>true</ForceSimulatorX64ArchitectureInIDE>
 </PropertyGroup>
-<PropertyGroup Condition="$(TargetFramework.Contains('-ios'))">
-	<BaseOutputPath>..\..\..\..\..\temp\</BaseOutputPath>
+<PropertyGroup>
+	<NoBindingEmbedding>false</NoBindingEmbedding>
 </PropertyGroup>
 ```
 

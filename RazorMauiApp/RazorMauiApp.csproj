@@ -64,8 +64,10 @@
 	<PropertyGroup Condition="$(TargetFramework.Contains('-ios')) and '$(Configuration)' == 'Debug'">
 		<ForceSimulatorX64ArchitectureInIDE>true</ForceSimulatorX64ArchitectureInIDE>
 	</PropertyGroup>
-	<PropertyGroup>
+	<!-- <PropertyGroup>
 		<BaseOutputPath>..\..\..\..\..\temp\</BaseOutputPath>
-	</PropertyGroup>
-	
+	</PropertyGroup> -->
+	<PropertyGroup>
+<NoBindingEmbedding>false</NoBindingEmbedding>
+</PropertyGroup>
 </Project>
